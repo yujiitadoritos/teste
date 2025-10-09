@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --background-img: url(./assets/dark\ bg.jpg);
+  --text-color: white;
+  --switch-img: url(./assets/control.svg);
+  --switch-back: rgba(255, 255, 255, 0.05);
+  --switch-border: rgba(255, 255, 255, 0.5);
+  --list-back: rgba(255, 255, 255, 0.05);
+  --list-bord: 3px rgba(255, 255, 255, 0.6);
+  --list-bord-hover: 3px rgba(255, 255, 255, 0.8);
+  --list-back-hover: rgba(255, 255, 255, 0.2);
+}
+
+.anime {
+  --background-img: url(./assets/anime\ back.jpg);
+  --text-color: white;
+  --switch-img: url(./assets/akatsuki.svg);
+  --switch-back: rgba(0, 0, 0, 0.2);
+  --switch-border: rgba(0, 0, 0, 1);
+  --list-back: rgba(69, 14, 0, 0.4);
+  --list-bord: 3px rgba(255, 255, 255, 0.5);
+  --list-bord-hover: 3px rgba(255, 255, 255, 0.6);
+  --list-back-hover: rgba(41, 6, 0, 0.6);
+}
+body {
+  background: var(--background-img);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
+body * {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+
+  text-decoration: none;
+  color: var(--text-color);
+}
+#caixa {
+  padding: 0 20px;
+  width: 320px;
+  margin: 20px auto;
+}
+#perfil {
+  text-align: center;
+
+  padding: 0 20px;
+}
+#perfil img {
+  width: 140px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+#switch button {
+  width: 32px;
+  height: 32px;
+  border: 0px;
+  border-radius: 50%;
+  background: white var(--switch-img);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translatey(-50%);
+}
+.anime #switch button {
+  left: initial;
+  right: 0;
+}
+#switch span {
+  display: block;
+  background: var(--switch-back);
+  width: 64px;
+  height: 24px;
+  border: 1px solid var(--switch-border);
+  border-radius: 9999px;
+}
+ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+ul li a {
+  font-size: 20px;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: var(--list-back);
+
+  border: solid var(--list-bord);
+  transition: background 0.5s;
+}
+ul li a:hover {
+  border: solid var(--list-bord-hover);
+  background: var(--list-back-hover);
+}
+#atalhos {
+  display: flex;
+  padding: 12 0px;
+  font-size: 30px;
+  justify-content: center;
+}
+#atalhos a {
+  padding: 16px;
+  display: flex;
+}
